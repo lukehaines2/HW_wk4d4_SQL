@@ -34,18 +34,37 @@
 
     6. Selects the names and prices of all products, ordered by price in descending order.
 
+    sqlite> select name, price from products ORDER BY price DESC;
+    Cat Ears|99.99
+    Brown Leather Boots|82.0
+    Lonely Pillow|78.82
+    Card Against Humanity|25.0
+    Hoodie|25.0
+    Set of silverware|22.99
+    The Ruby Programming Language|19.99
+    Teddy Bear|17.99
+    Silicon Valley Monopoly|10.99
+    Set of 12 Mason Jars|6.22
 
     7. Selects the average price of all products.
 
+    sqlite> select *, AVG(price) from products;
+    10|2013-04-01 20:09:41.984861|Set of silverware|22.99|t|38.899
 
     8. Selects the sum of the price of all products.
 
+    sqlite> select *, SUM(price) from products;
+    10|2013-04-01 20:09:41.984861|Set of silverware|22.99|t|388.99
 
     9. Selects the sum of the price of all products whose prices is less than £20.
 
+    sqlite> select *, SUM(price) from products where price < 20;
+    9|2013-04-01 20:09:41.983386|Set of 12 Mason Jars|6.22|f|55.19
 
     10. Selects the id of the user with your name.
 
+    sqlite> select id from users where name = "Elena Sanna";
+    12
 
     11. Selects the names of all users whose names start with the letter "J".
 
