@@ -67,21 +67,44 @@
     12
 
     11. Selects the names of all users whose names start with the letter "J".
+    
+    sqlite> select name from users where name like 'J%';
+    Jon Rogers
+    James Gotsell
 
 
     12. Selects the number of users whose first names are "Spencer".
-
+    
+    sqlite> select name from users where name like 'Spencer%';
+    Spencer Meyer
 
     13. Selects the number of users who want a "Teddy Bear".
 
+    sqlite> select name from products where name like 'Teddy Bear%';
+    Teddy Bear
 
     14. Selects the count of items on the wishlish of the user with your name.
 
+    select count(items) from wishlist where name = "Elena Sanna";
 
+
+    select count(w.product_id) 
+    from wishlists as w 
+      join users as u
+      on w.user_id = u.id
+    where u.name = "Elena Sanna";
+    8
 
     15. Selects the count and name of all products on the wishlist, ordered by count in descending order.
 
+select count(w.product_id) 
+    from wishlists as w 
+      join users as u
+      on w.user_id = u.id
+    where u.name = "Elena Sanna";
 
+    group by 
+    order by 
 
     16. Selects the count and name of all products that are not on sale on the wishlist, ordered by count 
     in descending order.
@@ -89,6 +112,8 @@
 
     17. Inserts a user with the name "Jonathan Anderson" into the users table. Ensure the created_at column is set to the current time.
     
+    insert jonathan anderson cos it doesnt exist
+    <!-- sql insert time -->
 
     18. Selects the id of the user with the name "Jonathan Anderson"?
     
