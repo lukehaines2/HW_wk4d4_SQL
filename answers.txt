@@ -9,16 +9,28 @@
 
 
     2. Selects the names of all products that cost less than £20.
-
+    
+    sqlite> select * from products where price < 20;
+    1|2013-04-01 20:09:41.969902|Teddy Bear|17.99|f
+    4|2013-04-01 20:09:41.975612|The Ruby Programming Language|19.99|t
+    5|2013-04-01 20:09:41.977249|Silicon Valley Monopoly|10.99|t
+    9|2013-04-01 20:09:41.983386|Set of 12 Mason Jars|6.22|f
 
     3. Selects the name and price of the most expensive product.
+    
+    sqlite> select name, MAX(price) from products;
+    Cat Ears|99.99
 
 
     4. Selects the name and price of the second most expensive product.
 
+    sqlite> select name, MAX(price) from products where price < (select MAX(price) from products);
+    Brown Leather Boots|82.0    
 
     5. Selects the name and price of the least expensive product.
 
+    sqlite> select name, MIN(price) from products;
+    Set of 12 Mason Jars|6.22
 
     6. Selects the names and prices of all products, ordered by price in descending order.
 
