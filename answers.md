@@ -97,14 +97,17 @@
 
     15. Selects the count and name of all products on the wishlist, ordered by count in descending order.
 
-select count(w.product_id) 
-    from wishlists as w 
-      join users as u
-      on w.user_id = u.id
-    where u.name = "Elena Sanna";
+    select name, count(name) from products join wishlists as w on w.product_id = products.id group by name order by count(name) desc;
+    Hoodie|17
+    Card Against Humanity|16
+    Cat Ears|15
+    The Ruby Programming Language|9
+    Teddy Bear|6
+    Silicon Valley Monopoly|5
+    Brown Leather Boots|4
+    Lonely Pillow|2
+    Set of 12 Mason Jars|2
 
-    group by 
-    order by 
 
     16. Selects the count and name of all products that are not on sale on the wishlist, ordered by count 
     in descending order.
@@ -117,6 +120,8 @@ select count(w.product_id)
 
     18. Selects the id of the user with the name "Jonathan Anderson"?
     
+    select id from users where name = "johnathan Anderson3";
+    17
 
     19. Inserts a wishlist entry for the user with the name "Jonathan Anderson" for the product "The Ruby Programming Language".
     
