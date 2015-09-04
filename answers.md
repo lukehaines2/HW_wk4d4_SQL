@@ -115,22 +115,24 @@
 
     17. Inserts a user with the name "Jonathan Anderson" into the users table. Ensure the created_at column is set to the current time.
     
-    insert jonathan anderson cos it doesnt exist
-    <!-- sql insert time -->
+insert jonathan anderson cos it doesnt exist
+<!-- sql insert time -->
 
     18. Selects the id of the user with the name "Jonathan Anderson"?
     
-    select id from users where name = "johnathan Anderson3";
-    17
+select id from users where name = "johnathan Anderson3";
+17
 
     19. Inserts a wishlist entry for the user with the name "Jonathan Anderson" for the product "The Ruby Programming Language".
     
 
     20. Updates the name of the "Jonathan Anderson" user to be "Jon Anderson".
     
+    sqlite> update users set name = "johnathan anderson" where name = "Jon Anderson"
 
     21. Deletes the user with the name "Jon Anderson".
     
+    DELETE FROM users WHERE name = 'Jon Anderson';
 
     22. Deletes the wishlist item for the user you just deleted.
 Please supply SQL statements, and the results they generate.
