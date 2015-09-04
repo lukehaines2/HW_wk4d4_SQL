@@ -111,17 +111,20 @@
 
     16. Selects the count and name of all products that are not on sale on the wishlist, ordered by count 
     in descending order.
+  
+
+#####
 
 
     17. Inserts a user with the name "Jonathan Anderson" into the users table. Ensure the created_at column is set to the current time.
     
-insert jonathan anderson cos it doesnt exist
-<!-- sql insert time -->
+    INSERT INTO "users" VALUES (15, '2015-04-01 20:09:41.951026', 'Jonathan Anderson');
+
 
     18. Selects the id of the user with the name "Jonathan Anderson"?
     
-select id from users where name = "johnathan Anderson3";
-17
+    select id from users where name = "johnathan Anderson3";
+    15
 
     19. Inserts a wishlist entry for the user with the name "Jonathan Anderson" for the product "The Ruby Programming Language".
     
